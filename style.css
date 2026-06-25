@@ -8,8 +8,13 @@
 }
 
 body {
+  transform: scale(0.8);
+  transform-origin: top left;
+  width: 125%; /* 100 / 0.8 */
   font-family: "Poppins", sans-serif;
+
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -408,10 +413,6 @@ article .icon {
   margin: 1rem;
 }
 
-.contact-info-container i{
-  width: 32px;
-  height: 20px;
-}
 
 .contact-info-container p {
   font-size: larger;
