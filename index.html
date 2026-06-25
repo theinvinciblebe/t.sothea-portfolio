@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THENG SOTHEA Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Theng Sothea</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Theng Sothea</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/pf3.png" alt="Theng Sothea profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Theng Sothea</h1>
+      <p class="section__text__p2">Web Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/THENG-SOTHEA_Web Developer_CV.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href = './#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="
+              location.href =
+                'https://www.linkedin.com/in/theng-sothea-2b0327306/'
+            " />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href = 'https://github.com/theinvinciblebe/'" />
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <!-- <div class="section__pic-container">
+        <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
+      </div> -->
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>2+ years <br />Frontend & Backend Development</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>
+              Bachelor of MIS SETEC Institute – Graduated: 2025<br />
+              BACII Hun Sen Steong Trang High School – Graduated: 2019
+            </p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            Hi, I’m T heng Sothea, a dedicated Web Developer passionate about
+            building modern, responsive, and user-friendly websites. I
+            specialize in front-end development with HTML, CSS, and
+            JavaScript, and enjoy crafting powerful back-end solutions using
+            Laravel. I focus on creating dynamic web applications that blend
+            clean design, smooth functionality, and optimal performance. From
+            multi-step forms to data-driven dashboards, I aim to turn complex
+            ideas into simple, effective solutions. Always eager to learn, I
+            stay updated with new technologies and best practices to deliver
+            projects that meet both user needs and business goals.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href = './#experience'" />
+  </section>
+
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <!-- Frontend -->
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+
+          <div class="article-container">
+            <article>
+              <i class="devicon-html5-plain colored"></i>
+              <div>
+                <h3>HTML5</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="devicon-css3-plain colored"></i>
+              <div>
+                <h3>CSS3</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="devicon-javascript-plain colored"></i>
+              <div>
+                <h3>JavaScript</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="devicon-bootstrap-plain colored"></i>
+              <div>
+                <h3>Bootstrap</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="devicon-jquery-plain-wordmark colored"></i>
+              <div>
+                <h3>Jquery</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="devicon-react-original colored"></i>
+              <div>
+                <h3>Material UI</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend Development</h2>
+
+          <div class="article-container">
+            <article>
+              <i class="devicon-laravel-original colored"></i>
+              <div>
+                <h3>Laravel</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <i class="devicon-dotnetcore-plain colored"></i>
+              <div>
+                <h3>ASP.NET</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="devicon-php-plain colored"></i>
+              <div>
+                <h3>PHP</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="devicon-django-plain colored"></i>
+              <div>
+                <h3>Django</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="devicon-csharp-plain colored"></i>
+              <div>
+                <h3>C#</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="devicon-python-plain colored"></i>
+              <div>
+                <h3>Python</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="details-container">
+          <h2 class="experience-sub-title">Database</h2>
+
+          <div class="article-container">
+            <article>
+              <i class="devicon-mysql-original colored"></i>
+              <div>
+                <h3>MySQL</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="devicon-sqlite-plain colored"></i>
+              <div>
+                <h3>SQLite</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+
+            <article>
+              <i class="devicon-mongodb-plain colored"></i>
+              <div>
+                <h3>MongoDB</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tools&others -->
+    <div class="details-container">
+      <h2 class="experience-sub-title">Tools & Others</h2>
+
+      <div class="article-container">
+        <article>
+          <i class="devicon-git-plain colored"></i>
+          <div>
+            <h3>Git</h3>
+            <p>Experienced</p>
+          </div>
+        </article>
+
+        <article>
+          <i class="devicon-github-original"></i>
+          <div>
+            <h3>GitHub</h3>
+            <p>Experienced</p>
+          </div>
+        </article>
+
+        <article>
+          <i class="devicon-vscode-plain colored"></i>
+          <div>
+            <h3>VS Code</h3>
+            <p>Experienced</p>
+          </div>
+        </article>
+
+        <article>
+          <i class="devicon-linux-plain colored"></i>
+          <div>
+            <h3>Linux</h3>
+            <p>Experienced</p>
+          </div>
+        </article>
+        <article>
+          <i class="devicon-cpanel-plain colored"></i>
+          <div>
+            <h3>CPanel</h3>
+            <p>Experienced</p>
+          </div>
+        </article>
+        <article>
+          <i class="devicon-wordpress-plain colored"></i>
+          <div>
+            <h3>WordPress</h3>
+            <p>Experienced</p>
+          </div>
+        </article>
+        
+      </div>
+    </div>
+
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href = './#projects'" />
+  </section>
+
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+
+    <div class="experience-details-container">
+      <div class="swiper projectSwiper">
+        <div class="swiper-wrapper">
+          <!-- Project 1 -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/business_cambodia_screen.png" alt="business_cambodia_screen"
+                  title="business_cambodia_screen" class="project-img" />
+              </div>
+
+              <h2 class="experience-sub-title project-title">
+                Business Cambodia Clone
+              </h2>
+
+              <div class="framework-icon">
+                <span>Built with:</span>
+                <i class="devicon-html5-plain-wordmark colored" title="HTML5"></i>
+                <i class="devicon-css3-plain-wordmark colored" title="CSS3"></i>
+              </div>
+
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="
+                      window.open(
+                        'https://github.com/theinvinciblebe/businesscambodia-website-news-clone',
+                      )
+                    ">
+                  Github
+                </button>
+
+                <button class="btn btn-color-2 project-btn" onclick="
+                      window.open(
+                        'https://businesscambodia-website-news-clone.vercel.app/',
+                      )
+                    ">
+                  Live Demo
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/portfolio-SMS.jpg" alt="School-Management-System" title="sms_screen"
+                  class="project-img" />
+              </div>
+
+              <h2 class="experience-sub-title project-title">
+                School Management System
+              </h2>
+              <div class="framework-icon">
+                <span>Built with:</span>
+                <i class="devicon-laravel-original colored" title="Laravel"></i>
+                <i class="devicon-php-plain colored" title="PHP"></i>
+                <i class="devicon-mysql-original colored" title="MySQL"></i>
+                <i class="devicon-bootstrap-plain colored" title="Bootstrap"></i>
+                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                <i class="devicon-jquery-plain colored" title="jQuery"></i>
+              </div>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="
+                      window.open(
+                        'https://github.com/theinvinciblebe/School-Management-System',
+                      )
+                    ">
+                  Github
+                </button>
+
+                <button class="btn btn-color-2 project-btn" onclick="window.open('https://youtu.be/9heV5d_ghW4')">
+                  Video Demo
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/CMS gaming copy.jpg" alt="Project 3" title="CMS-Gaming-Product"
+                  class="project-img" />
+              </div>
+
+              <h2 class="experience-sub-title project-title">
+                CMS Gaming Product
+              </h2>
+              <div class="framework-icon">
+                <span>Built with:</span>
+                <i class="devicon-laravel-original colored" title="Laravel"></i>
+                <i class="devicon-php-plain colored" title="PHP"></i>
+                <i class="devicon-mysql-original colored" title="MySQL"></i>
+                <i class="devicon-bootstrap-plain colored" title="Bootstrap"></i>
+                <i class="devicon-jquery-plain colored" title="jQuery"></i>
+              </div>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="
+                      window.open(
+                        'https://github.com/theinvinciblebe/CMS-Gaming-Product',
+                      )
+                    ">
+                  Github
+                </button>
+
+                <button class="btn btn-color-2 project-btn" onclick="window.open('https://youtu.be/l98rVPVcLao')">
+                  Video Demo
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/Bookstore POS copy.jpg" alt="Project 3" title="Bookstore POS"
+                  class="project-img" />
+              </div>
+
+              <h2 class="experience-sub-title project-title">
+                BookStore POS System
+              </h2>
+              <div class="framework-icon">
+                <span>Built with:</span>
+                <i class="devicon-java-plain-wordmark colored" title="Java"></i>
+                <i class="devicon-maven-plain-wordmark colored" title="Maven"></i>
+                <i class="devicon-mysql-original colored" title="MySQL"></i>
+
+              </div>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="
+                      window.open(
+                        'https://github.com/theinvinciblebe/BookStore_POS',
+                      )
+                    ">
+                  Github
+                </button>
+
+                <button class="btn btn-color-2 project-btn" onclick="window.open('https://youtu.be/hZtipe03dU8')">
+                  Video Demo
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/ecommerce django copy.jpg" alt="Project 3" title="E-Commerce Application"
+                  class="project-img" />
+              </div>
+
+              <h2 class="experience-sub-title project-title">
+                E-Commerce Application
+              </h2>
+              <div class="framework-icon">
+                <span>Built with:</span>
+                <i class="devicon-python-plain-wordmark colored" title="Python"></i>
+                <i class="devicon-django-plain-wordmark colored" title="Django"></i>
+                <i class="devicon-sqlite-plain-wordmark colored" title="SQLite"></i>
+
+
+              </div>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="
+                      window.open(
+                        'https://github.com/theinvinciblebe/Ecommerce-Django',
+                      )
+                    ">
+                  Github
+                </button>
+
+                <button class="btn btn-color-2 project-btn" onclick="window.open('https://youtu.be/AQPn6fPKXks')">
+                  Video Demo
+                </button>
+              </div>
+            </div>
+          </div>
+
+                    <!-- Project 5 -->
+          <div class="swiper-slide">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img src="./assets/depreciation copy.jpg" alt="Project 3" title="E-Commerce Application"
+                  class="project-img" />
+              </div>
+
+              <h2 class="experience-sub-title project-title">
+                Depreciaton System
+              </h2>
+              <div class="framework-icon">
+                <span>Built with:</span>
+                <i class="devicon-php-plain colored" title="PHP"></i>
+                <i class="devicon-mysql-plain-wordmark colored" title="MySQL"></i>
+
+              </div>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="
+                      window.open(
+                        'https://github.com/theinvinciblebe/Depreciation-System',
+                      )
+                    ">
+                  Github
+                </button>
+
+                <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.youtube.com/watch?v=peapBO5NgXY')">
+                  Video Demo
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href = './#contact'" />
+  </section>
+
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p>
+          <a href="mailto:examplemail@gmail.com">sotheatheng2002@gmail.com</a>
+        </p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+      </div>
+      <div class="contact-info-container">
+        <i class="fa-solid fa-phone"></i>
+        <p><a href="#">+855-867-248-55</a></p>
+      </div>
+      <div class="contact-info-container">
+        <i class="fa-brands fa-telegram"></i>
+        <p><a href="https://t.me/theinvinciblebe">@theinvinciblebe</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </footer> -->
+  <!-- Scroll Up -->
+  <button id="scrollUp" class="scroll-btn">▲</button>
+
+  <!-- Scroll Down -->
+  <button id="scrollDown" class="scroll-btn">▼</button>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
