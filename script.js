@@ -1,4 +1,178 @@
 // ==========================================================================
+// MULTI-LANGUAGE TRANSLATION SYSTEM (ENGLISH & KHMER)
+// ==========================================================================
+const translations = {
+  en: {
+    "nav.about": "About",
+    "nav.experience": "Experience",
+    "nav.projects": "Projects",
+    "nav.contact": "Contact",
+    "nav.home": "Home",
+
+    "hero.status": "Available for Work",
+    "hero.greeting": "Hello, I'm",
+    "hero.downloadCv": "Download CV",
+    "hero.contactInfo": "Contact Info",
+
+    "about.subtitle": "Get To Know More",
+    "about.title": "About Me",
+    "about.experienceTitle": "Experience",
+    "about.experienceDesc": "2+ years <br />Frontend & Backend Development",
+    "about.educationTitle": "Education",
+    "about.educationDesc": "Bachelor of MIS SETEC Institute – Graduated: 2026<br />BACII Hun Sen Steong Trang High School – Graduated: 2019",
+    "about.bio": "Hi, I’m Theng Sothea, a dedicated Web Developer passionate about building modern, responsive, and user-friendly websites. I specialize in front-end development with HTML, CSS, and JavaScript, and enjoy crafting powerful back-end solutions using Laravel. I focus on creating dynamic web applications that blend clean design, smooth functionality, and optimal performance. From multi-step forms to data-driven dashboards, I aim to turn complex ideas into simple, effective solutions. Always eager to learn, I stay updated with new technologies and best practices to deliver projects that meet both user needs and business goals.",
+
+    "experience.subtitle": "Explore My",
+    "experience.title": "Experience",
+    "experience.frontend": "Frontend Development",
+    "experience.backend": "Backend Development",
+    "experience.database": "Database",
+    "experience.tools": "Tools & Others",
+
+    "level.experienced": "Experienced",
+    "level.intermediate": "Intermediate",
+    "level.basic": "Basic",
+
+    "projects.subtitle": "Browse My Recent",
+    "projects.title": "Projects",
+    "projects.builtWith": "Built with:",
+    "projects.github": "GitHub",
+    "projects.liveDemo": "Live Demo",
+    "projects.videoDemo": "Video Demo",
+
+    "project.bcClone": "Business Cambodia Clone",
+    "project.sms": "School Management System",
+    "project.cmsGaming": "CMS Gaming Product",
+    "project.pos": "BookStore POS System",
+    "project.ecommerce": "E-Commerce Application",
+    "project.depreciation": "Depreciation System",
+
+    "contact.subtitle": "Get in Touch",
+    "contact.title": "Contact Me",
+    "contact.email": "Email",
+    "contact.linkedin": "LinkedIn",
+    "contact.phone": "Phone",
+    "contact.telegram": "Telegram",
+
+    "footer.copyright": "Designed & Built by <strong>Theng Sothea</strong> &bull; 2026"
+  },
+  km: {
+    "nav.about": "អំពីខ្ញុំ",
+    "nav.experience": "បទពិសោធន៍",
+    "nav.projects": "គម្រោង",
+    "nav.contact": "ទំនាក់ទំនង",
+    "nav.home": "ទំព័រដើម",
+
+    "hero.status": "ត្រៀមខ្លួនសម្រាប់ធ្វើការងារ",
+    "hero.greeting": "សួស្តី ខ្ញុំបាទ",
+    "hero.downloadCv": "ទាញយក CV",
+    "hero.contactInfo": "ព័ត៌មានទំនាក់ទំនង",
+
+    "about.subtitle": "ស្វែងយល់បន្ថែម",
+    "about.title": "អំពីខ្ញុំ",
+    "about.experienceTitle": "បទពិសោធន៍",
+    "about.experienceDesc": "២+ ឆ្នាំ <br />ការអភិវឌ្ឍ Frontend & Backend",
+    "about.educationTitle": "ការអប់រំ",
+    "about.educationDesc": "បរិញ្ញាបត្រ MIS វិទ្យាស្ថាន SETEC – បញ្ចប់ការសិក្សា៖ ២០២៦<br />បាក់ឌុប វិទ្យាល័យ ហ៊ុន សែន ស្ទឹងត្រង់ – បញ្ចប់ការសិក្សា៖ ២០១៩",
+    "about.bio": "សួស្តី! ខ្ញុំបាទ ថេង សុធា ជាអ្នកអភិវឌ្ឍន៍គេហទំព័រ (Web Developer) មួយរូប ដែលមានចំណង់ចំណូលចិត្តក្នុងការបង្កើតគេហទំព័រទំនើប ស្រស់ស្អាត Responsive និងងាយស្រួលប្រើប្រាស់។ ខ្ញុំមានជំនាញផ្នែក Front-end ដោយប្រើ HTML, CSS, JavaScript និង Back-end ដោយប្រើប្រាស់ Laravel។ ខ្ញុំផ្តោតលើការបង្កើតកម្មវិធីគេហទំព័រដែលមានល្បឿនលឿន សុវត្ថិភាព និងប្រសិទ្ធភាពខ្ពស់។ ខ្ញុំតែងតែរៀនសូត្របច្ចេកវិទ្យាថ្មីៗជាប្រចាំ ដើម្បីសម្រេចបាននូវគម្រោងប្រកបដោយគុណភាពខ្ពស់សម្រាប់អ្នកប្រើប្រាស់ និងអាជីវកម្ម។",
+
+    "experience.subtitle": "ស្វែងយល់ពី",
+    "experience.title": "បទពិសោធន៍ & ជំនាញ",
+    "experience.frontend": "ការអភិវឌ្ឍ Frontend",
+    "experience.backend": "ការអភិវឌ្ឍ Backend",
+    "experience.database": "ប្រព័ន្ធមូលដ្ឋានទិន្នន័យ (Database)",
+    "experience.tools": "ឧបករណ៍ & ផ្សេងៗ",
+
+    "level.experienced": "ស្ទាត់ជំនាញ",
+    "level.intermediate": "មធ្យម",
+    "level.basic": "មូលដ្ឋាន",
+
+    "projects.subtitle": "មើលស្នាដៃថ្មីៗ",
+    "projects.title": "គម្រោងស្នាដៃ",
+    "projects.builtWith": "បង្កើតឡើងដោយ៖",
+    "projects.github": "GitHub",
+    "projects.liveDemo": "សាកល្បងផ្ទាល់",
+    "projects.videoDemo": "វីដេអូបង្ហាញ",
+
+    "project.bcClone": "Business Cambodia Clone",
+    "project.sms": "ប្រព័ន្ធគ្រប់គ្រងសាលារៀន",
+    "project.cmsGaming": "ប្រព័ន្ធ CMS Gaming Product",
+    "project.pos": "ប្រព័ន្ធ POS លក់សៀវភៅ",
+    "project.ecommerce": "កម្មវិធីទិញលក់ទំនិញ Online",
+    "project.depreciation": "ប្រព័ន្ធគណនារំលស់ទ្រព្យ",
+
+    "contact.subtitle": "ទំនាក់ទំនងមកកាន់ខ្ញុំ",
+    "contact.title": "ទំនាក់ទំនង",
+    "contact.email": "អ៊ីមែល",
+    "contact.linkedin": "លីងខ៍អ៊ីន (LinkedIn)",
+    "contact.phone": "លេខទូរស័ព្ទ",
+    "contact.telegram": "តេឡេក្រាម (Telegram)",
+
+    "footer.copyright": "រចនា និងបង្កើតដោយ <strong>ថេង សុធា</strong> &bull; 2026"
+  }
+};
+
+const rolesData = {
+  en: [
+    "Full Stack Web Developer",
+    "Laravel & PHP Specialist",
+    "React & JavaScript Enthusiast",
+    "UI/UX Minded Creator"
+  ],
+  km: [
+    "អ្នកបង្កើតគេហទំព័រ Full Stack",
+    "អ្នកឯកទេស Laravel & PHP",
+    "អ្នកអភិវឌ្ឍន៍ React & JS",
+    "អ្នករចនា UI/UX"
+  ]
+};
+
+let currentLang = localStorage.getItem("lang-preference") || "en";
+let roles = rolesData[currentLang] || rolesData.en;
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const applyLanguage = (langSetting) => {
+  currentLang = langSetting === "km" ? "km" : "en";
+  document.documentElement.setAttribute("lang", currentLang);
+
+  // Update text content of data-i18n elements
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[currentLang] && translations[currentLang][key]) {
+      const translation = translations[currentLang][key];
+      if (translation.includes("<br") || translation.includes("<strong")) {
+        el.innerHTML = translation;
+      } else {
+        el.textContent = translation;
+      }
+    }
+  });
+
+  // Update active state on language pills
+  document.querySelectorAll(".lang-pill-btn").forEach((btn) => {
+    const val = btn.getAttribute("data-lang-val");
+    if (val === currentLang) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
+  });
+
+  // Reset typewriter with new language roles
+  roles = rolesData[currentLang] || rolesData.en;
+  roleIndex = 0;
+  charIndex = 0;
+  isDeleting = false;
+};
+
+const setLanguage = (langSetting) => {
+  localStorage.setItem("lang-preference", langSetting);
+  applyLanguage(langSetting);
+};
+
+// ==========================================================================
 // TAILWIND-STYLE THEME SWITCHER (SYSTEM, LIGHT, DARK)
 // ==========================================================================
 const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -36,10 +210,13 @@ mediaQuery.addEventListener("change", (e) => {
   }
 });
 
-// Bind event listeners to all theme pill buttons
+// Bind event listeners to all theme & language pill buttons
 document.addEventListener("DOMContentLoaded", () => {
   const currentPref = localStorage.getItem("theme-preference") || "system";
   applyTheme(currentPref);
+
+  const initialLangPref = localStorage.getItem("lang-preference") || "en";
+  applyLanguage(initialLangPref);
 
   document.querySelectorAll(".theme-pill-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -47,11 +224,19 @@ document.addEventListener("DOMContentLoaded", () => {
       setTheme(selected);
     });
   });
+
+  document.querySelectorAll(".lang-pill-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const selected = btn.getAttribute("data-lang-val");
+      setLanguage(selected);
+    });
+  });
 });
 
 // Initial run
 const initialPref = localStorage.getItem("theme-preference") || "system";
 applyTheme(initialPref);
+applyLanguage(currentLang);
 
 // Mobile menu toggle
 function toggleMenu() {
@@ -170,26 +355,20 @@ const swiper = new Swiper(".projectSwiper", {
   breakpoints: {
     0: {
       slidesPerView: 1,
+      spaceBetween: 16,
     },
     768: {
       slidesPerView: 2,
+      spaceBetween: 24,
     },
     1200: {
       slidesPerView: 3,
+      spaceBetween: 30,
     },
   },
 });
 
 // Typewriter Animation for Hero Section Subtitle
-const roles = [
-  "Full Stack Web Developer",
-  "Laravel & PHP Specialist",
-  "React & JavaScript Enthusiast",
-  "UI/UX Minded Creator"
-];
-let roleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
 const typingElement = document.querySelector(".typing-text");
 
 function typeRole() {

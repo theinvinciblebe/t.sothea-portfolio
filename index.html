@@ -11,8 +11,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
+  <link rel="icon" type="image/png" href="./assets/pf3.png" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -41,11 +42,23 @@
     </a>
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+        <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
       </ul>
+
+      <!-- Language Switcher Pill -->
+      <div class="lang-switch-pill" role="radiogroup" aria-label="Language selection">
+        <button class="lang-pill-btn active" data-lang-val="en" title="English" aria-label="English">
+          <span>EN</span>
+        </button>
+        <button class="lang-pill-btn" data-lang-val="km" title="ភាសាខ្មែរ" aria-label="ភាសាខ្មែរ">
+          <span>KH</span>
+        </button>
+      </div>
+
+      <!-- Theme Switcher Pill -->
       <div class="theme-switch-pill" role="radiogroup" aria-label="Theme selection">
         <button class="theme-pill-btn" data-theme-val="system" title="System Theme" aria-label="System Theme">
           <i class="fa-solid fa-desktop"></i>
@@ -66,6 +79,17 @@
         /&gt;</span>
     </a>
     <div class="hamburger-right">
+      <!-- Language Switcher Pill Mobile -->
+      <div class="lang-switch-pill" role="radiogroup" aria-label="Language selection">
+        <button class="lang-pill-btn active" data-lang-val="en" title="English" aria-label="English">
+          <span>EN</span>
+        </button>
+        <button class="lang-pill-btn" data-lang-val="km" title="ភាសាខ្មែរ" aria-label="ភាសាខ្មែរ">
+          <span>KH</span>
+        </button>
+      </div>
+
+      <!-- Theme Switcher Pill Mobile -->
       <div class="theme-switch-pill" role="radiogroup" aria-label="Theme selection">
         <button class="theme-pill-btn" data-theme-val="system" title="System Theme" aria-label="System Theme">
           <i class="fa-solid fa-desktop"></i>
@@ -84,10 +108,10 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="#about" onclick="toggleMenu()" data-i18n="nav.about">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()" data-i18n="nav.contact">Contact</a></li>
         </div>
       </div>
     </div>
@@ -99,23 +123,23 @@
         <div class="avatar-glow"></div>
         <img src="./assets/pf3.png" alt="Theng Sothea profile picture" class="profile-avatar" />
         <div class="badge-status">
-          <span class="status-dot"></span> Available for Work
+          <span class="status-dot"></span> <span data-i18n="hero.status">Available for Work</span>
         </div>
       </div>
     </div>
     <div class="section__text">
       <div class="greeting-badge">
-        <span class="wave">👋</span> Hello, I'm
+        <span class="wave">👋</span> <span data-i18n="hero.greeting">Hello, I'm</span>
       </div>
       <h1 class="title hero-title">Theng <span class="text-gradient">Sothea</span></h1>
       <p class="section__text__p2 typed-role"><span class="typing-text">Full Stack Web Developer</span></p>
       <div class="btn-container">
         <button class="btn btn-primary" onclick="window.open('./assets/THENG-SOTHEA_CV.pdf')">
-          <span>Download CV</span>
+          <span data-i18n="hero.downloadCv">Download CV</span>
           <i class="fa-solid fa-file-arrow-down"></i>
         </button>
         <button class="btn btn-secondary" onclick="location.href = './#contact'">
-          <span>Contact Info</span>
+          <span data-i18n="hero.contactInfo">Contact Info</span>
           <i class="fa-solid fa-paper-plane"></i>
         </button>
       </div>
@@ -137,8 +161,8 @@
   </section>
 
   <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
+    <p class="section__text__p1" data-i18n="about.subtitle">Get To Know More</p>
+    <h1 class="title" data-i18n="about.title">About Me</h1>
     <div class="section-container">
       <!-- <div class="section__pic-container">
         <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
@@ -147,21 +171,21 @@
         <div class="about-containers">
           <div class="details-container">
             <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-            <h3>Experience</h3>
-            <p>2+ years <br />Frontend & Backend Development</p>
+            <h3 data-i18n="about.experienceTitle">Experience</h3>
+            <p data-i18n="about.experienceDesc">2+ years <br />Frontend & Backend Development</p>
           </div>
           <div class="details-container">
             <!-- <img src="./assets/education.png" alt="Education icon" class="icon" /> -->
             <i class="fa-solid fa-school" style="font-size: 25px;"></i>
-            <h3>Education</h3>
-            <p>
+            <h3 data-i18n="about.educationTitle">Education</h3>
+            <p data-i18n="about.educationDesc">
               Bachelor of MIS SETEC Institute – Graduated: 2026<br />
               BACII Hun Sen Steong Trang High School – Graduated: 2019
             </p>
           </div>
         </div>
         <div class="text-container">
-          <p>
+          <p data-i18n="about.bio">
             Hi, I’m Theng Sothea, a dedicated Web Developer passionate about
             building modern, responsive, and user-friendly websites. I
             specialize in front-end development with HTML, CSS, and
@@ -180,20 +204,20 @@
   </section>
 
   <section id="experience">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Experience</h1>
+    <p class="section__text__p1" data-i18n="experience.subtitle">Explore My</p>
+    <h1 class="title" data-i18n="experience.title">Experience</h1>
     <div class="experience-details-container">
       <div class="about-containers">
         <!-- Frontend -->
         <div class="details-container">
-          <h2 class="experience-sub-title">Frontend Development</h2>
+          <h2 class="experience-sub-title" data-i18n="experience.frontend">Frontend Development</h2>
 
           <div class="article-container">
             <article>
               <i class="devicon-html5-plain colored"></i>
               <div>
                 <h3>HTML5</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -201,7 +225,7 @@
               <i class="devicon-css3-plain colored"></i>
               <div>
                 <h3>CSS3</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -209,7 +233,7 @@
               <i class="devicon-tailwindcss-plain colored"></i>
               <div>
                 <h3>Tailwind CSS</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -217,7 +241,7 @@
               <i class="devicon-javascript-plain colored"></i>
               <div>
                 <h3>JavaScript</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -225,7 +249,7 @@
               <i class="devicon-bootstrap-plain colored"></i>
               <div>
                 <h3>Bootstrap</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -233,7 +257,7 @@
               <i class="devicon-react-original colored"></i>
               <div>
                 <h3>React JS</h3>
-                <p>Intermediate</p>
+                <p data-i18n="level.intermediate">Intermediate</p>
               </div>
             </article>
 
@@ -241,7 +265,7 @@
               <i class="devicon-xml-plain colored"></i>
               <div>
                 <h3>XML</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -249,7 +273,7 @@
               <i class="devicon-jquery-plain-wordmark colored"></i>
               <div>
                 <h3>Jquery</h3>
-                <p>Intermediate</p>
+                <p data-i18n="level.intermediate">Intermediate</p>
               </div>
             </article>
           </div>
@@ -257,14 +281,14 @@
 
         <!-- Backend -->
         <div class="details-container">
-          <h2 class="experience-sub-title">Backend Development</h2>
+          <h2 class="experience-sub-title" data-i18n="experience.backend">Backend Development</h2>
 
           <div class="article-container">
             <article>
               <i class="devicon-laravel-original colored"></i>
               <div>
                 <h3>Laravel</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -273,7 +297,7 @@
                 class="icon" />
               <div>
                 <h3>Odoo ERP</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -281,7 +305,7 @@
               <i class="devicon-php-plain colored"></i>
               <div>
                 <h3>PHP</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -289,7 +313,7 @@
               <i class="devicon-python-plain colored"></i>
               <div>
                 <h3>Python</h3>
-                <p>Intermediate</p>
+                <p data-i18n="level.intermediate">Intermediate</p>
               </div>
             </article>
 
@@ -297,7 +321,7 @@
               <i class="devicon-django-plain colored"></i>
               <div>
                 <h3>Django</h3>
-                <p>Intermediate</p>
+                <p data-i18n="level.intermediate">Intermediate</p>
               </div>
             </article>
 
@@ -305,7 +329,7 @@
               <i class="devicon-dotnetcore-plain colored"></i>
               <div>
                 <h3>ASP.NET</h3>
-                <p>Basic</p>
+                <p data-i18n="level.basic">Basic</p>
               </div>
             </article>
 
@@ -313,7 +337,7 @@
               <i class="devicon-csharp-plain colored"></i>
               <div>
                 <h3>C#</h3>
-                <p>Intermediate</p>
+                <p data-i18n="level.intermediate">Intermediate</p>
               </div>
             </article>
           </div>
@@ -321,14 +345,14 @@
 
         <!-- Database -->
         <div class="details-container">
-          <h2 class="experience-sub-title">Database</h2>
+          <h2 class="experience-sub-title" data-i18n="experience.database">Database</h2>
 
           <div class="article-container">
             <article>
               <i class="devicon-postgresql-plain colored"></i>
               <div>
                 <h3>PostgreSQL</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -336,7 +360,7 @@
               <i class="devicon-mysql-original colored"></i>
               <div>
                 <h3>MySQL</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -344,7 +368,7 @@
               <i class="devicon-sqlite-plain colored"></i>
               <div>
                 <h3>SQLite</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -352,7 +376,7 @@
               <i class="devicon-mongodb-plain colored"></i>
               <div>
                 <h3>MongoDB</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
           </div>
@@ -360,14 +384,14 @@
 
         <!-- Tools & Others -->
         <div class="details-container">
-          <h2 class="experience-sub-title">Tools & Others</h2>
+          <h2 class="experience-sub-title" data-i18n="experience.tools">Tools & Others</h2>
 
           <div class="article-container">
             <article>
               <i class="devicon-git-plain colored"></i>
               <div>
                 <h3>Git</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -375,7 +399,7 @@
               <i class="devicon-github-original"></i>
               <div>
                 <h3>GitHub</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -383,7 +407,7 @@
               <i class="devicon-vscode-plain colored"></i>
               <div>
                 <h3>VS Code</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -391,7 +415,7 @@
               <i class="devicon-linux-plain colored"></i>
               <div>
                 <h3>Linux</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -399,7 +423,7 @@
               <i class="devicon-cpanel-plain colored"></i>
               <div>
                 <h3>CPanel</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -407,7 +431,7 @@
               <i class="devicon-wordpress-plain colored"></i>
               <div>
                 <h3>WordPress</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
 
@@ -416,7 +440,7 @@
                 class="icon" />
               <div>
                 <h3>Hostinger</h3>
-                <p>Experienced</p>
+                <p data-i18n="level.experienced">Experienced</p>
               </div>
             </article>
           </div>
@@ -428,8 +452,8 @@
   </section>
 
   <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
+    <p class="section__text__p1" data-i18n="projects.subtitle">Browse My Recent</p>
+    <h1 class="title" data-i18n="projects.title">Projects</h1>
 
     <div class="experience-details-container">
       <div class="swiper projectSwiper">
@@ -442,12 +466,12 @@
                   title="business_cambodia_screen" class="project-img" />
               </div>
 
-              <h2 class="experience-sub-title project-title">
+              <h2 class="experience-sub-title project-title" data-i18n="project.bcClone">
                 Business Cambodia Clone
               </h2>
 
               <div class="framework-icon">
-                <span>Built with:</span>
+                <span data-i18n="projects.builtWith">Built with:</span>
                 <i class="devicon-html5-plain-wordmark colored" title="HTML5"></i>
                 <i class="devicon-css3-plain-wordmark colored" title="CSS3"></i>
               </div>
@@ -458,7 +482,8 @@
                         'https://github.com/theinvinciblebe/businesscambodia-website-news-clone',
                       )
                     ">
-                  Github
+                  <i class="fa-brands fa-github"></i>
+                  <span data-i18n="projects.github">GitHub</span>
                 </button>
 
                 <button class="btn btn-color-2 project-btn" onclick="
@@ -466,7 +491,8 @@
                         'https://businesscambodia-website-news-clone.vercel.app/',
                       )
                     ">
-                  Live Demo
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <span data-i18n="projects.liveDemo">Live Demo</span>
                 </button>
               </div>
             </div>
@@ -480,11 +506,11 @@
                   class="project-img" />
               </div>
 
-              <h2 class="experience-sub-title project-title">
+              <h2 class="experience-sub-title project-title" data-i18n="project.sms">
                 School Management System
               </h2>
               <div class="framework-icon">
-                <span>Built with:</span>
+                <span data-i18n="projects.builtWith">Built with:</span>
                 <i class="devicon-laravel-original colored" title="Laravel"></i>
                 <i class="devicon-php-plain colored" title="PHP"></i>
                 <i class="devicon-mysql-original colored" title="MySQL"></i>
@@ -498,11 +524,13 @@
                         'https://github.com/theinvinciblebe/School-Management-System',
                       )
                     ">
-                  Github
+                  <i class="fa-brands fa-github"></i>
+                  <span data-i18n="projects.github">GitHub</span>
                 </button>
 
                 <button class="btn btn-color-2 project-btn" onclick="window.open('https://youtu.be/u52D_zMyP8w')">
-                  Video Demo
+                  <i class="fa-brands fa-youtube"></i>
+                  <span data-i18n="projects.videoDemo">Video Demo</span>
                 </button>
               </div>
             </div>
@@ -516,11 +544,11 @@
                   class="project-img" />
               </div>
 
-              <h2 class="experience-sub-title project-title">
+              <h2 class="experience-sub-title project-title" data-i18n="project.cmsGaming">
                 CMS Gaming Product
               </h2>
               <div class="framework-icon">
-                <span>Built with:</span>
+                <span data-i18n="projects.builtWith">Built with:</span>
                 <i class="devicon-laravel-original colored" title="Laravel"></i>
                 <i class="devicon-php-plain colored" title="PHP"></i>
                 <i class="devicon-mysql-original colored" title="MySQL"></i>
@@ -533,11 +561,13 @@
                         'https://github.com/theinvinciblebe/CMS-Gaming-Product',
                       )
                     ">
-                  Github
+                  <i class="fa-brands fa-github"></i>
+                  <span data-i18n="projects.github">GitHub</span>
                 </button>
 
                 <button class="btn btn-color-2 project-btn" onclick="window.open('https://youtu.be/l98rVPVcLao')">
-                  Video Demo
+                  <i class="fa-brands fa-youtube"></i>
+                  <span data-i18n="projects.videoDemo">Video Demo</span>
                 </button>
               </div>
             </div>
@@ -550,15 +580,14 @@
                 <img src="./assets/Bookstore POS copy.jpg" alt="Project 3" title="Bookstore POS" class="project-img" />
               </div>
 
-              <h2 class="experience-sub-title project-title">
+              <h2 class="experience-sub-title project-title" data-i18n="project.pos">
                 BookStore POS System
               </h2>
               <div class="framework-icon">
-                <span>Built with:</span>
+                <span data-i18n="projects.builtWith">Built with:</span>
                 <i class="devicon-java-plain-wordmark colored" title="Java"></i>
                 <i class="devicon-maven-plain-wordmark colored" title="Maven"></i>
                 <i class="devicon-mysql-original colored" title="MySQL"></i>
-
               </div>
               <div class="btn-container">
                 <button class="btn btn-color-2 project-btn" onclick="
@@ -566,11 +595,13 @@
                         'https://github.com/theinvinciblebe/BookStore_POS',
                       )
                     ">
-                  Github
+                  <i class="fa-brands fa-github"></i>
+                  <span data-i18n="projects.github">GitHub</span>
                 </button>
 
                 <button class="btn btn-color-2 project-btn" onclick="window.open('https://youtu.be/hZtipe03dU8')">
-                  Video Demo
+                  <i class="fa-brands fa-youtube"></i>
+                  <span data-i18n="projects.videoDemo">Video Demo</span>
                 </button>
               </div>
             </div>
@@ -584,16 +615,14 @@
                   class="project-img" />
               </div>
 
-              <h2 class="experience-sub-title project-title">
+              <h2 class="experience-sub-title project-title" data-i18n="project.ecommerce">
                 E-Commerce Application
               </h2>
               <div class="framework-icon">
-                <span>Built with:</span>
+                <span data-i18n="projects.builtWith">Built with:</span>
                 <i class="devicon-python-plain-wordmark colored" title="Python"></i>
                 <i class="devicon-django-plain-wordmark colored" title="Django"></i>
                 <i class="devicon-sqlite-plain-wordmark colored" title="SQLite"></i>
-
-
               </div>
               <div class="btn-container">
                 <button class="btn btn-color-2 project-btn" onclick="
@@ -601,11 +630,13 @@
                         'https://github.com/theinvinciblebe/Ecommerce-Django',
                       )
                     ">
-                  Github
+                  <i class="fa-brands fa-github"></i>
+                  <span data-i18n="projects.github">GitHub</span>
                 </button>
 
                 <button class="btn btn-color-2 project-btn" onclick="window.open('https://youtu.be/AQPn6fPKXks')">
-                  Video Demo
+                  <i class="fa-brands fa-youtube"></i>
+                  <span data-i18n="projects.videoDemo">Video Demo</span>
                 </button>
               </div>
             </div>
@@ -619,14 +650,13 @@
                   class="project-img" />
               </div>
 
-              <h2 class="experience-sub-title project-title">
-                Depreciaton System
+              <h2 class="experience-sub-title project-title" data-i18n="project.depreciation">
+                Depreciation System
               </h2>
               <div class="framework-icon">
-                <span>Built with:</span>
+                <span data-i18n="projects.builtWith">Built with:</span>
                 <i class="devicon-php-plain colored" title="PHP"></i>
                 <i class="devicon-mysql-plain-wordmark colored" title="MySQL"></i>
-
               </div>
               <div class="btn-container">
                 <button class="btn btn-color-2 project-btn" onclick="
@@ -634,12 +664,14 @@
                         'https://github.com/theinvinciblebe/Depreciation-System',
                       )
                     ">
-                  Github
+                  <i class="fa-brands fa-github"></i>
+                  <span data-i18n="projects.github">GitHub</span>
                 </button>
 
                 <button class="btn btn-color-2 project-btn"
                   onclick="window.open('https://www.youtube.com/watch?v=peapBO5NgXY')">
-                  Video Demo
+                  <i class="fa-brands fa-youtube"></i>
+                  <span data-i18n="projects.videoDemo">Video Demo</span>
                 </button>
               </div>
             </div>
@@ -664,15 +696,15 @@
   </section>
 
   <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
+    <p class="section__text__p1" data-i18n="contact.subtitle">Get in Touch</p>
+    <h1 class="title" data-i18n="contact.title">Contact Me</h1>
     <div class="contact-info-upper-container">
       <a href="mailto:sotheatheng2002@gmail.com" class="contact-info-card">
         <div class="contact-icon-wrapper">
           <i class="fa-solid fa-envelope"></i>
         </div>
         <div class="contact-card-text">
-          <span class="contact-label">Email</span>
+          <span class="contact-label" data-i18n="contact.email">Email</span>
           <span class="contact-value">sotheatheng2002@gmail.com</span>
         </div>
       </a>
@@ -682,7 +714,7 @@
           <i class="fa-brands fa-linkedin-in"></i>
         </div>
         <div class="contact-card-text">
-          <span class="contact-label">LinkedIn</span>
+          <span class="contact-label" data-i18n="contact.linkedin">LinkedIn</span>
           <span class="contact-value">Theng Sothea</span>
         </div>
       </a>
@@ -691,7 +723,7 @@
           <i class="fa-solid fa-phone"></i>
         </div>
         <div class="contact-card-text">
-          <span class="contact-label">Phone</span>
+          <span class="contact-label" data-i18n="contact.phone">Phone</span>
           <span class="contact-value">+855 867 248 55</span>
         </div>
       </a>
@@ -700,7 +732,7 @@
           <i class="fa-brands fa-telegram"></i>
         </div>
         <div class="contact-card-text">
-          <span class="contact-label">Telegram</span>
+          <span class="contact-label" data-i18n="contact.telegram">Telegram</span>
           <span class="contact-value">@sotheatheng2002</span>
         </div>
       </a>
@@ -710,13 +742,13 @@
   <footer>
     <div class="footer-content">
       <ul class="footer-links">
-        <li><a href="#profile">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#profile" data-i18n="nav.home">Home</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
-      <p class="copyright">Designed & Built by <strong>Theng Sothea</strong> &bull; 2026</p>
+      <p class="copyright" data-i18n="footer.copyright">Designed & Built by <strong>Theng Sothea</strong> &bull; 2026</p>
     </div>
   </footer>
 
