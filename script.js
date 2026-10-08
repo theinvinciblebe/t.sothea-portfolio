@@ -173,28 +173,18 @@ const setLanguage = (langSetting) => {
 };
 
 // ==========================================================================
-// TAILWIND-STYLE THEME SWITCHER (SYSTEM, LIGHT, DARK)
+// THEME SWITCHER (DARK / LIGHT TOGGLE)
 // ==========================================================================
 const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
 const applyTheme = (themeSetting) => {
   let resolvedTheme = themeSetting;
   
-  if (themeSetting === "system" || !themeSetting) {
+  if (!resolvedTheme || resolvedTheme === "system") {
     resolvedTheme = mediaQuery.matches ? "dark" : "light";
   }
 
   document.documentElement.setAttribute("data-theme", resolvedTheme);
-
-  // Update active pill button state
-  document.querySelectorAll(".theme-pill-btn").forEach((btn) => {
-    const val = btn.getAttribute("data-theme-val");
-    if (val === themeSetting) {
-      btn.classList.add("active");
-    } else {
-      btn.classList.remove("active");
-    }
-  });
 };
 
 const setTheme = (setting) => {
@@ -202,26 +192,31 @@ const setTheme = (setting) => {
   applyTheme(setting);
 };
 
-// Listen for system theme changes if set to system
+const toggleTheme = () => {
+  const currentTheme = document.documentElement.getAttribute("data-theme") || (mediaQuery.matches ? "dark" : "light");
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  setTheme(newTheme);
+};
+
+// Listen for system theme changes if no explicit theme preference is set
 mediaQuery.addEventListener("change", (e) => {
-  const currentPref = localStorage.getItem("theme-preference") || "system";
-  if (currentPref === "system") {
-    applyTheme("system");
+  const currentPref = localStorage.getItem("theme-preference");
+  if (!currentPref) {
+    applyTheme(e.matches ? "dark" : "light");
   }
 });
 
-// Bind event listeners to all theme & language pill buttons
+// Bind event listeners to theme & language controls
 document.addEventListener("DOMContentLoaded", () => {
-  const currentPref = localStorage.getItem("theme-preference") || "system";
+  const currentPref = localStorage.getItem("theme-preference") || (mediaQuery.matches ? "dark" : "light");
   applyTheme(currentPref);
 
   const initialLangPref = localStorage.getItem("lang-preference") || "en";
   applyLanguage(initialLangPref);
 
-  document.querySelectorAll(".theme-pill-btn").forEach((btn) => {
+  document.querySelectorAll(".theme-toggle-btn, .theme-switch-pill").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const selected = btn.getAttribute("data-theme-val");
-      setTheme(selected);
+      toggleTheme();
     });
   });
 
@@ -234,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Initial run
-const initialPref = localStorage.getItem("theme-preference") || "system";
+const initialPref = localStorage.getItem("theme-preference") || (mediaQuery.matches ? "dark" : "light");
 applyTheme(initialPref);
 applyLanguage(currentLang);
 
@@ -503,7 +498,8 @@ function initMouseInteractions() {
     "button",
     ".btn",
     ".nav-link",
-    ".theme-pill-btn",
+    ".theme-toggle-btn",
+    ".theme-switch-pill",
     ".social-icon-btn",
     ".scroll-btn",
     ".details-container",
@@ -585,7 +581,7 @@ function initMouseInteractions() {
   });
 
   // Magnetic Pull Effect on Social Icons & Floating Buttons
-  const magneticElements = document.querySelectorAll(".social-icon-btn, .scroll-btn, .theme-pill-btn");
+  const magneticElements = document.querySelectorAll(".social-icon-btn, .scroll-btn, .theme-toggle-btn, .theme-switch-pill");
   magneticElements.forEach((el) => {
     el.addEventListener("mousemove", (e) => {
       const rect = el.getBoundingClientRect();

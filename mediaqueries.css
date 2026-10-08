@@ -317,14 +317,18 @@
   }
 
   .theme-switch-pill,
-  .lang-switch-pill {
-    padding: 2px;
+  .theme-toggle-btn {
+    width: 32px;
+    height: 32px;
   }
 
-  .theme-pill-btn {
-    width: 28px;
-    height: 28px;
-    font-size: 0.85rem;
+  .theme-switch-pill i,
+  .theme-toggle-btn i {
+    font-size: 0.9rem;
+  }
+
+  .lang-switch-pill {
+    padding: 2px;
   }
 
   .lang-pill-btn {
@@ -433,10 +437,15 @@
     font-size: 0.72rem;
   }
 
-  .theme-pill-btn {
-    width: 25px;
-    height: 25px;
-    font-size: 0.78rem;
+  .theme-switch-pill,
+  .theme-toggle-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .theme-switch-pill i,
+  .theme-toggle-btn i {
+    font-size: 0.8rem;
   }
 
   .menu-links {
