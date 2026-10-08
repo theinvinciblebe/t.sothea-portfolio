@@ -3,6 +3,7 @@
 // ==========================================================================
 const translations = {
   en: {
+    "nav.logo": "<span class=\"logo-bracket\">&lt;</span>Theng <span class=\"logo-gradient\">Sothea</span><span class=\"logo-bracket\">/&gt;</span>",
     "nav.about": "About",
     "nav.experience": "Experience",
     "nav.projects": "Projects",
@@ -11,6 +12,7 @@ const translations = {
 
     "hero.status": "Available for Work",
     "hero.greeting": "Hello, I'm",
+    "hero.name": "Theng <span class=\"text-gradient\">Sothea</span>",
     "hero.downloadCv": "Download CV",
     "hero.contactInfo": "Contact Info",
 
@@ -57,6 +59,7 @@ const translations = {
     "footer.copyright": "Designed & Built by <strong>Theng Sothea</strong> &bull; 2026"
   },
   km: {
+    "nav.logo": "<span class=\"logo-bracket\">&lt;</span>ថេង <span class=\"logo-gradient\">សុធា</span><span class=\"logo-bracket\">/&gt;</span>",
     "nav.about": "អំពីខ្ញុំ",
     "nav.experience": "បទពិសោធន៍",
     "nav.projects": "គម្រោង",
@@ -65,6 +68,7 @@ const translations = {
 
     "hero.status": "ត្រៀមខ្លួនសម្រាប់ធ្វើការងារ",
     "hero.greeting": "សួស្តី ខ្ញុំបាទ",
+    "hero.name": "ថេង <span class=\"text-gradient\">សុធា</span>",
     "hero.downloadCv": "ទាញយក CV",
     "hero.contactInfo": "ព័ត៌មានទំនាក់ទំនង",
 
@@ -142,7 +146,7 @@ const applyLanguage = (langSetting) => {
     const key = el.getAttribute("data-i18n");
     if (translations[currentLang] && translations[currentLang][key]) {
       const translation = translations[currentLang][key];
-      if (translation.includes("<br") || translation.includes("<strong")) {
+      if (translation.includes("<")) {
         el.innerHTML = translation;
       } else {
         el.textContent = translation;
