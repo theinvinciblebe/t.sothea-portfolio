@@ -1197,6 +1197,13 @@ article p {
   flex-shrink: 0;
 }
 
+.project-img-box a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
 .project-img {
   width: 100%;
   height: 100%;
