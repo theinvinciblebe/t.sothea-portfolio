@@ -196,10 +196,48 @@ const setTheme = (setting) => {
   applyTheme(setting);
 };
 
-const toggleTheme = () => {
+const toggleTheme = (event) => {
   const currentTheme = document.documentElement.getAttribute("data-theme") || (mediaQuery.matches ? "dark" : "light");
   const newTheme = currentTheme === "dark" ? "light" : "dark";
-  setTheme(newTheme);
+
+  if (!document.startViewTransition || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) {
+    setTheme(newTheme);
+    return;
+  }
+
+  let x, y;
+  if (event && (typeof event.clientX === "number" && typeof event.clientY === "number" && (event.clientX !== 0 || event.clientY !== 0))) {
+    x = event.clientX;
+    y = event.clientY;
+  } else {
+    const btn = document.querySelector("#theme-toggle-desktop, #theme-toggle-mobile, .theme-toggle-btn");
+    if (btn) {
+      const rect = btn.getBoundingClientRect();
+      x = rect.left + rect.width / 2;
+      y = rect.top + rect.height / 2;
+    } else {
+      x = window.innerWidth / 2;
+      y = window.innerHeight / 2;
+    }
+  }
+
+  const endRadius = Math.hypot(
+    Math.max(x, window.innerWidth - x),
+    Math.max(y, window.innerHeight - y)
+  );
+
+  document.documentElement.style.setProperty("--theme-cx", `${x}px`);
+  document.documentElement.style.setProperty("--theme-cy", `${y}px`);
+  document.documentElement.style.setProperty("--theme-r", `${endRadius}px`);
+  document.documentElement.setAttribute("data-theme-anim", "1");
+
+  const transition = document.startViewTransition(() => {
+    setTheme(newTheme);
+  });
+
+  transition.finished.finally(() => {
+    document.documentElement.removeAttribute("data-theme-anim");
+  });
 };
 
 // Listen for system theme changes if no explicit theme preference is set
@@ -219,8 +257,8 @@ document.addEventListener("DOMContentLoaded", () => {
   applyLanguage(initialLangPref);
 
   document.querySelectorAll(".theme-toggle-btn, .theme-switch-pill").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      toggleTheme();
+    btn.addEventListener("click", (e) => {
+      toggleTheme(e);
     });
   });
 

@@ -327,6 +327,11 @@
     font-size: 0.9rem;
   }
 
+  .theme-toggle-icon-wrap {
+    width: 16px;
+    height: 16px;
+  }
+
   .lang-switch-pill {
     padding: 2px;
   }
@@ -458,6 +463,11 @@
   .theme-switch-pill i,
   .theme-toggle-btn i {
     font-size: 0.8rem;
+  }
+
+  .theme-toggle-icon-wrap {
+    width: 14px;
+    height: 14px;
   }
 
   .menu-links {
