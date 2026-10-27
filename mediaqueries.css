@@ -520,7 +520,18 @@
 
   .framework-icon {
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
+    min-height: auto;
+  }
+
+  .tech-pill {
+    padding: 0.28rem 0.6rem;
+    font-size: 0.74rem;
+    gap: 5px;
+  }
+
+  .tech-pill i {
+    font-size: 0.88rem;
   }
 
   .contact-info-card {

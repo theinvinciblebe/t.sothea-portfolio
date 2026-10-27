@@ -551,6 +551,7 @@ function initMouseInteractions() {
     ".swiper-pagination-bullet",
     ".mouse-scroll-indicator",
     ".hamburger-icon",
+    ".tech-pill",
     "input",
     "textarea"
   ].join(",");
