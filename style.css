@@ -1251,6 +1251,11 @@ article p {
   padding: 40px 10px 85px;
 }
 
+.projectSwiper .swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
 .swiper-slide {
   display: flex;
   justify-content: center;
