@@ -56,7 +56,7 @@ const translations = {
     "contact.phone": "Phone",
     "contact.telegram": "Telegram",
 
-    "footer.copyright": "Designed & Built by <strong>Theng Sothea</strong> &bull; 2026"
+    "footer.copyright": "Designed & Built by <strong>Theng Sothea</strong> &bull; <a href=\"https://thengsothea-portfolio-v2.vercel.app/\" class=\"footer-version-link\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"Open Portfolio V2\">v2.0</a> &bull; 2026"
   },
   km: {
     "nav.logo": "<span class=\"logo-bracket\">&lt;</span>ថេង <span class=\"logo-gradient\">សុធា</span><span class=\"logo-bracket\">/&gt;</span>",
@@ -112,7 +112,7 @@ const translations = {
     "contact.phone": "លេខទូរស័ព្ទ",
     "contact.telegram": "តេឡេក្រាម (Telegram)",
 
-    "footer.copyright": "រចនា និងបង្កើតដោយ <strong>ថេង សុធា</strong> &bull; 2026"
+    "footer.copyright": "រចនា និងបង្កើតដោយ <strong>ថេង សុធា</strong> &bull; <a href=\"https://thengsothea-portfolio-v2.vercel.app/\" class=\"footer-version-link\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"Open Portfolio V2\">v2.0</a> &bull; 2026"
   }
 };
 

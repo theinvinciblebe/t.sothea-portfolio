@@ -324,8 +324,54 @@ nav.scrolled {
   -webkit-text-fill-color: transparent;
 }
 
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
 .logo:hover {
   transform: scale(1.03);
+}
+
+/* Version Badge in Navbar */
+.version-badge {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: rgba(28, 53, 45, 0.5);
+  border: 1px solid rgba(248, 240, 229, 0.25);
+  color: #F8F0E5;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.version-badge:hover {
+  background: var(--accent-secondary);
+  border-color: #F8F0E5;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(248, 240, 229, 0.4);
+  transform: translateY(-2px) scale(1.06);
+}
+
+[data-theme="light"] .version-badge {
+  background: #F8F0E5;
+  border: 1px solid rgba(28, 53, 45, 0.25);
+  color: var(--accent-primary);
+}
+
+[data-theme="light"] .version-badge:hover {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #F8F0E5;
+  box-shadow: 0 2px 10px rgba(28, 53, 45, 0.25);
 }
 
 .nav-links {
@@ -1761,6 +1807,42 @@ footer {
 
 .copyright strong {
   color: var(--text-main);
+}
+
+/* Footer Version Link */
+.footer-version-link {
+  display: inline-block;
+  padding: 1px 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  background: rgba(28, 53, 45, 0.5);
+  border: 1px solid rgba(248, 240, 229, 0.25);
+  color: #F8F0E5;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
+.footer-version-link:hover {
+  background: var(--accent-secondary);
+  border-color: #F8F0E5;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(28, 53, 45, 0.5);
+}
+
+[data-theme="light"] .footer-version-link {
+  background: #F8F0E5;
+  border: 1px solid rgba(28, 53, 45, 0.25);
+  color: var(--accent-primary);
+}
+
+[data-theme="light"] .footer-version-link:hover {
+  background: var(--accent-primary);
+  color: #F8F0E5;
+  border-color: var(--accent-primary);
 }
 
 /* --------------------------------------------------------------------------

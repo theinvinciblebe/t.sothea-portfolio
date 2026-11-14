@@ -438,6 +438,12 @@
     font-size: 1.15rem;
   }
 
+  .version-badge {
+    font-size: 0.6rem;
+    padding: 1px 5px;
+    margin-left: 5px;
+  }
+
   .hamburger-right {
     gap: 0.5rem;
   }
